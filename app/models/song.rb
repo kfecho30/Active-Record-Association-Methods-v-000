@@ -9,7 +9,7 @@ class Song < ActiveRecord::Base
 
   def drake_made_this
     binding.pry
-    drake = Artist.find_by(name: 'Drake')
+    drake = Artist.create(name: 'Drake')
     self.artist = drake
   end
 end
