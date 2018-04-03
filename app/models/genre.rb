@@ -10,7 +10,7 @@ class Genre < ActiveRecord::Base
     artists = self.songs.collect do |song|
       song.artist
     end
-    artists.uniq.count
+    artists.uniq.size
   end
 
   def all_artist_names
