@@ -17,6 +17,6 @@ class Genre < ActiveRecord::Base
     artists = self.songs.collect do |song|
       song.artist
     end
-    artists.name.uniq
+    artists.uniq
   end
 end
